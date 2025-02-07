@@ -366,7 +366,11 @@ main h2 {
 	letter-spacing: 0.1em;	/*文字間隔を少しだけ広く*/
 	color: var(--primary-color);	/*文字色。css冒頭で指定しているprimary-colorを読み込みます*/
 }
-
+@media screen and (max-width: 600px) {
+    h2 {
+        font-size: 1.5em; /* 文字サイズを小さく */
+    }
+}
 /*bg1背景の上でのh2*/
 .bg1 h2 {
 	color: var(--primary-inverse-color);	/*文字色。css冒頭で指定しているprimary-inverse-colorを読み込みます*/
