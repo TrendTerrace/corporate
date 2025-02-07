@@ -359,6 +359,55 @@ a.ddmenu::before {
 
 /*main
 ---------------------------------------------------------------------------*/
+.profile {
+	display: flex; /* 横並びにする */
+	align-items: flex-start; /* 上揃えにする */
+	position: relative; /* 背景画像配置の基準 */
+  }
+  
+  .profile-text {
+	width: 70%; /* テキスト領域の幅 */
+  }
+  
+  .profile-image {
+	width: 30%; /* 画像領域の幅 */
+	text-align: center; /* 画像を中央に配置 */
+  }
+  
+  .profile-image img {
+	max-width: 100%; /* 画像が領域内に収まるようにする */
+	height: auto; /* 画像のアスペクト比を維持する */
+  }
+  
+  /* スマホでの表示 */
+  @media (max-width: 767px) {
+	.profile {
+	  display: block; /* 縦並びにする */
+	}
+  
+	.profile-text {
+	  width: 100%; /* テキスト領域の幅を100%にする */
+	  padding: 20px; /* 余白を追加 */
+	  color: white; /* 文字色を背景色に合わせて調整 */
+	  position: relative; /* 背景画像を重ねるため */
+	  z-index: 1; /* テキストを前面に表示 */
+	}
+  
+	.profile-image {
+	  width: 100%; /* 画像領域の幅を100%にする */
+	  position: absolute; /* 絶対配置 */
+	  top: 0;
+	  left: 0;
+	  z-index: -1; /* 背景に配置 */
+	}
+  
+	.profile-image img {
+	  width: 100%; /* 画像を領域全体に表示 */
+	  height: auto;
+	  filter: brightness(0.8); 
+	  object-fit: cover; /* 画像が領域全体に表示されるようにする */
+	}
+  }
 /*h2(見出し)要素*/
 main h2 {
 	font-family: "Reddit Sans", "Noto Sans JP", sans-serif;
