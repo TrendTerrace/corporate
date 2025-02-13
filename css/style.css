@@ -55,7 +55,15 @@
 	100% {opacity: 1;transform: scale(1);}
 }
 
+#com2 {
+	color: #fff;
+	font-size: 60px;
+}
 
+#com3{
+	color:#fff;
+	font-size: 30px;
+}
 /*全体の設定
 ---------------------------------------------------------------------------*/
 body * {box-sizing: border-box;}
