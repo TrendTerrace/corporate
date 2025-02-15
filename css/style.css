@@ -57,12 +57,12 @@
 
 #com2 {
 	color: #fff;
-	font-size: 60px;
+	font-size: clamp(30px, 3vw, 60px);
 }
 
 #com3{
 	color:#fff;
-	font-size: 30px;
+	font-size: clamp(13px, 3vw, 30px);
 }
 /*全体の設定
 ---------------------------------------------------------------------------*/
@@ -890,15 +890,17 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 .ta1 th,
 .ta1 td {
   padding: 1rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   word-break: break-all;
   text-align: left; /* 内容を左揃え */
 }
 
 .ta1 td {
   border-left: 1px solid #000000;
+  border-right:1px solid #000000;
 }
 .ta1 th {
+	border-left: 1px solid #000000;
   width: 30%;
 }
 
@@ -924,6 +926,69 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
   .career-table th {
 	width: 30%; /* 見出しの幅を調整 */
 
+  }
+@media screen and (max-width: 600px) { /* 画面幅が600px以下の場合 */
+  .ta1 {
+    display: block; /* テーブルをブロック要素にする */
+  }
+
+  .ta1 thead {
+    display: none; /* ヘッダーを非表示にする */
+  }
+
+  .ta1 tr {
+    border-bottom: 1px solid #000; /* 行の下線を設定 */
+    display: flex; /* 行をflexboxにする */
+    flex-direction: column; /* 要素を縦に並べる */
+  }
+
+  .ta1 th,
+  .ta1 td {
+    border: none; /* セルのボーダーをなくす */
+    padding: 10px; /* パディングを設定 */
+    text-align: left; /* テキストを左寄せにする */
+  }
+
+  .ta1 th {
+    font-weight: bold; /* thを太字にする */
+    width: 100%; /* thの幅を100%にする */
+  }
+
+  .ta1 td {
+    width: 100%; /* tdの幅を100%にする */
+  }
+}@media screen and (max-width: 600px) { /* 画面幅が600px以下の場合に適用 */
+	.career-table {
+	  display: block; /* テーブルをブロック要素にする */
+	}
+	
+	.career-table thead {
+	  display: none; /* ヘッダーを非表示にする */
+	}
+  
+	.career-table tr {
+	  
+	  display: flex; /* 行をflexboxにする */
+	  flex-direction: column; /* 要素を縦に並べる */
+	}
+  
+	.career-table th,
+	.career-table td {
+	  border: none; /* セルのボーダーをなくす */
+	  padding: 10px; /* パディングを設定 */
+	  text-align: left; /* テキストを左寄せにする */
+	  width: 100%; /* 幅を100%にする */
+	}
+  
+	.career-table th {
+		border-bottom: 1px solid #000000; /* 行の下線を設定 */
+	  font-weight: bold; /* thを太字にする */
+	}
+  }
+  @media screen and (max-width: 600px) { /* 画面幅が600px以下の場合 */
+	.profile-image { /* または、img要素に直接スタイルを適用 */
+	  display: none; /* 画像を非表示にする */
+	}
   }
 /*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
