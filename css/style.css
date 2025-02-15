@@ -861,7 +861,10 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 
 /*テーブル（ta1）
 ---------------------------------------------------------------------------*/
-/*テーブル１行目に入った見出し部分（※caption）*/.table-container {
+/*テーブル１行目に入った見出し部分（※caption）*/
+
+
+.table-container {
   display: flex;
   justify-content: center; /* 水平方向の中央揃え */
 }
@@ -909,7 +912,12 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
     width: 20%;
   }
 }
-
+#about p,
+#about h3,
+.career-table th,
+.career-table td {
+  color: #000; /* 文字色を黒に指定 */
+}
 .career-table {
 	width: 65%; /* テーブルの幅を調整 */
 	border-collapse: collapse; /* セルの間隔をなくす */
