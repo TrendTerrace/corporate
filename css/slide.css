@@ -43,7 +43,7 @@
 
 /*３枚目画像*/
 .slide3 {
-	background: url('../images/raionkodomo.jpg') no-repeat center center / cover;	/*３枚目の背景画像の読み込み*/
+	background: url('../images/mainraion.jpg') no-repeat center center / cover;	/*３枚目の背景画像の読み込み*/
 	justify-content: center;	/*テキストブロックを中央に*/
 	text-align: center;			/*テキストをセンタリング*/
 }
