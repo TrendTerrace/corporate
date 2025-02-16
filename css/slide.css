@@ -33,7 +33,7 @@
 /*１枚目画像*/
 .slide1 {
 	background: url('../images/raion2.jpg') no-repeat center center / cover;	/*１枚目の背景画像の読み込み*/
-	justify-content: flex-end;	/*テキストブロックを右寄せ*/
+	
 }
 
 /*２枚目画像*/
@@ -51,14 +51,14 @@
 /*大きなテキスト*/
 #mainimg h1 {
 	margin: 0;padding: 0;
-	font-size: 6vw;		/*文字サイズ。100vwは画面幅100%のことです。*/
+	font-size: clamp(24px, 5vw, 70px);	/*文字サイズ。100vwは画面幅100%のことです。*/
 	line-height: 1.5;	/*行間を少し狭く*/
 	font-weight: 500;	/*文字の太さを少し太く*/
 }
 
 /*小さなテキスト*/
 #mainimg p {
-	font-size: 1.4vw;		/*文字サイズ。100vwは画面幅100%のことです*/
+	font-size: clamp(8px, 3vw, 24px);	/*文字サイズ。100vwは画面幅100%のことです*/
 	padding-left: 0.5rem;	/*左に空ける余白。0.5文字分。*/
 }
 
@@ -72,4 +72,16 @@
 .slide.active {
 	pointer-events: auto; /* 表示中のスライドのみクリックを有効にする */
 }
-
+/* スマホ (モバイル端末) 向けのスタイル */
+@media (max-width: 767px) { /* 767px 以下の場合に適用 */
+	.slide2 div { /* 2枚目の画像のスライド内にあるdiv要素 */
+	  position: absolute; /* 絶対位置に配置 */
+	  top: 190px; /* 上からの距離を指定 */
+	  left: 40px; /* 左からの距離を指定 */
+	  transform: none; /* 中央揃えのtransformを解除 */
+	  text-align: left; /* テキストを左揃えにする */
+	}
+	.slide2 #com1{
+		color: black;
+	}
+  }
