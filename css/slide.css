@@ -40,7 +40,13 @@
 .slide2 {
 	background: url('../images/raion3.jpg') no-repeat center center / cover;	/*２枚目の背景画像の読み込み*/
 }
-
+.slide2 div { /* 2枚目の画像のスライド内にあるdiv要素 */
+	position: absolute; /* 絶対位置に配置 */
+	top: 230px; /* 上からの距離を指定 */
+	left: 40px; /* 左からの距離を指定 */
+	transform: none; /* 中央揃えのtransformを解除 */
+	text-align: left; /* テキストを左揃えにする */
+  }
 /*３枚目画像*/
 .slide3 {
 	background: url('../images/mainraion.jpg') no-repeat center center / cover;	/*３枚目の背景画像の読み込み*/
@@ -51,7 +57,7 @@
 /*大きなテキスト*/
 #mainimg h1 {
 	margin: 0;padding: 0;
-	font-size: clamp(24px, 5vw, 70px);	/*文字サイズ。100vwは画面幅100%のことです。*/
+	font-size: clamp(24px, 4vw, 65px);	/*文字サイズ。100vwは画面幅100%のことです。*/
 	line-height: 1.5;	/*行間を少し狭く*/
 	font-weight: 500;	/*文字の太さを少し太く*/
 }

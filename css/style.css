@@ -951,7 +951,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
   color: #000; /* 文字色を黒に指定 */
 }
 .career-table {
-	width: 65%; /* テーブルの幅を調整 */
+	width: 80%; /* テーブルの幅を調整 */
 	border-collapse: collapse; /* セルの間隔をなくす */
 	margin-bottom: 20px; /* 下マージンを追加 */
   }
