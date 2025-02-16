@@ -20,6 +20,32 @@
 #com1{
 	color:#fff;
 }
+
+
+
+.thumbnail-view-parts {
+    position: relative; /* 相対配置を基準にする */
+}
+
+.prev-button,
+.next-button {
+    position: absolute; /* 絶対配置で位置を調整 */
+    top: 50%;
+    transform: translateY(-50%); /* 垂直方向に中央揃え */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 10px; /* 左端からの距離 */
+}
+
+.next-button {
+    right: 10px; /* 右端からの距離 */
+}
 /*CSSカスタムプロパティ（サイト全体を一括管理する為の設定）
 ---------------------------------------------------------------------------*/
 :root {

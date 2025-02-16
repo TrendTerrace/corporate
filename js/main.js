@@ -231,29 +231,53 @@ $(function() {
 // 詳細ページのサムネイル切り替え
 //===============================================================
 $(function() {
-    // 初期表示: 各 .thumbnail-view に対して、直後の .thumbnail の最初の画像を表示
+    // 初期表示
     $(".thumbnail-view-parts").each(function() {
         var firstThumbnailSrc = $(this).next(".thumbnail-parts").find("img:first").attr("src");
         var defaultImage = $("<img>").attr("src", firstThumbnailSrc);
         $(this).append(defaultImage);
     });
 
-    // サムネイルがクリックされたときの動作
+    // サムネイルクリック
     $(".thumbnail-parts img").click(function() {
         var imgSrc = $(this).attr("src");
         var newImage = $("<img>").attr("src", imgSrc).hide();
-
-        // このサムネイルの直前の .thumbnail-view 要素を取得
         var targetPhoto = $(this).parent(".thumbnail-parts").prev(".thumbnail-view-parts");
-
-        targetPhoto.find("img").fadeOut(400, function() {
-            targetPhoto.empty().append(newImage);
-            newImage.fadeIn(400);
-        });
+        changeImage(targetPhoto, newImage);
     });
+
+    // 矢印ボタンクリック
+    $(".prev-button").click(function() {
+        var targetPhoto = $(this).closest(".thumbnail-view-parts");
+        var currentIndex = targetPhoto.data("current-index") || 0; // 現在のインデックスを取得
+        currentIndex = (currentIndex - 1 + targetPhoto.next(".thumbnail-parts").find("img").length) % targetPhoto.next(".thumbnail-parts").find("img").length; // 前のインデックスを計算
+        targetPhoto.data("current-index", currentIndex); // 現在のインデックスを保存
+        changeImage(targetPhoto, getCurrentImage(targetPhoto, currentIndex));
+    });
+
+    $(".next-button").click(function() {
+        var targetPhoto = $(this).closest(".thumbnail-view-parts");
+        var currentIndex = targetPhoto.data("current-index") || 0; // 現在のインデックスを取得
+        currentIndex = (currentIndex + 1) % targetPhoto.next(".thumbnail-parts").find("img").length; // 次のインデックスを計算
+        targetPhoto.data("current-index", currentIndex); // 現在のインデックスを保存
+        changeImage(targetPhoto, getCurrentImage(targetPhoto, currentIndex));
+    });
+
+    // 画像切り替え関数
+    function changeImage(targetPhoto, newImage) {
+        targetPhoto.find("img").fadeOut(100, function() {
+            targetPhoto.find("img").remove();
+            targetPhoto.append(newImage);
+            newImage.fadeIn(100);
+        });
+    }
+
+    // 現在の画像を取得する関数
+    function getCurrentImage(targetPhoto, index) {
+        var currentImgSrc = targetPhoto.next(".thumbnail-parts").find("img").eq(index).attr("src");
+        return $("<img>").attr("src", currentImgSrc).hide();
+    }
 });
-
-
 //===============================================================
 // スライドショー
 //===============================================================
@@ -269,5 +293,5 @@ $(function() {
 		slides.eq(currentIndex).css('opacity', 0).removeClass('active');
 		slides.eq(nextIndex).css('opacity', 1).addClass('active');
 		currentIndex = nextIndex;
-	}, 4000); // 4秒ごとにスライドを切り替える
+	}, 3000); // 4秒ごとにスライドを切り替える
 });
