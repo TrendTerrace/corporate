@@ -80,14 +80,19 @@
 	0% {opacity: 0;transform: scale(0.8);}
 	100% {opacity: 1;transform: scale(1);}
 }
-
-#com2 {
+#com0 {
 	color: #fff;
+	font-size: clamp(30px, 3vw, 60px);
+}
+#com2 {
+	color: #000;
+	text-decoration:underline;
+    text-decoration-color:#000;
 	font-size: clamp(30px, 3vw, 60px);
 }
 
 #com3{
-	color:#fff;
+	color:#000;
 	font-size: clamp(13px, 3vw, 30px);
 }
 /*全体の設定
