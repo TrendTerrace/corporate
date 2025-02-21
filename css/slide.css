@@ -53,6 +53,13 @@
 	justify-content: center;/*テキストブロックを中央に*/
 	text-align: center;			/*テキストをセンタリング*/
 }
+.slide3 div { /* 2枚目の画像のスライド内にあるdiv要素 */
+	position: absolute; /* 絶対位置に配置 */
+	top: 260px; /* 上からの距離を指定 */
+	left: 50px; /* 左からの距離を指定 */
+	transform: none; /* 中央揃えのtransformを解除 */
+	text-align: left; /* テキストを左揃えにする */
+  }
 
 /*大きなテキスト*/
 #mainimg h1 {
