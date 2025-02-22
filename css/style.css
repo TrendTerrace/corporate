@@ -215,10 +215,9 @@ header {
 
 	/*画面幅900px以上の追加指定*/
 	@media screen and (min-width:900px) {
-	
 	/*ヘッダーブロック*/
 	header {
-		position: fixed;	
+		position: relative;
 		/* スクロールしても動かないようにする指定。 */
 		background-color:#fff;
 	}
@@ -407,19 +406,20 @@ a.ddmenu::before {
   }
   
   .profile-text {
-	width: 70%; /* テキスト領域の幅 */
+	width: 80%; /* テキスト領域の幅 */
   }
   
   .profile-image {
 	width: 30%; /* 画像領域の幅 */
 	text-align: center; /* 画像を中央に配置 */
+	margin-top: 150px;
   }
   
   .profile-image img {
 	max-width: 100%; /* 画像が領域内に収まるようにする */
 	height: auto; /* 画像のアスペクト比を維持する */
-  }
   
+  }
   /* スマホでの表示 */
   @media (max-width: 767px) {
 	.profile {
@@ -431,23 +431,11 @@ a.ddmenu::before {
 	  padding: 20px; /* 余白を追加 */
 	  color: white; /* 文字色を背景色に合わせて調整 */
 	  position: relative; /* 背景画像を重ねるため */
-	  z-index: 1; /* テキストを前面に表示 */
+
 	}
   
-	.profile-image {
-	  width: 100%; /* 画像領域の幅を100%にする */
-	  position: absolute; /* 絶対配置 */
-	  top: 0;
-	  left: 0;
-	  z-index: -1; /* 背景に配置 */
-	}
   
-	.profile-image img {
-	  width: 50%; /* 画像を領域全体に表示 */
-	  height: auto;
-	  filter: brightness(0.8); 
-	  object-fit: cover; /* 画像が領域全体に表示されるようにする */
-	}
+
   }
 /*h2(見出し)要素*/
   
@@ -964,6 +952,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 .career-table td {
   color: #000; /* 文字色を黒に指定 */
 }
+
 .career-table {
 	width: 80%; /* テーブルの幅を調整 */
 	border-collapse: collapse; /* セルの間隔をなくす */
@@ -1029,7 +1018,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	.career-table th,
 	.career-table td {
 	  border: none; /* セルのボーダーをなくす */
-	  padding: 10px; /* パディングを設定 */
+	  padding: 5px; /* パディングを設定 */
 	  text-align: left; /* テキストを左寄せにする */
 	  width: 100%; /* 幅を100%にする */
 	}
