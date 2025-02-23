@@ -688,9 +688,10 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
     padding: 0;
 }
 .list-grid1 .list img {
-	width: 400px;
-	height: 250px;
-	object-fit: cover; /* 画像が指定されたサイズに合うようにトリミング */
+	width: 100%; /* 親要素に合わせて幅を調整 */
+    max-width: 100%; /* 画像の最大幅を400pxに設定（必要に応じて調整） */
+    height: auto; /* 高さを自動調整 */
+    object-fit: cover;
   }
  
 /* ボックス内のp要素 */
@@ -750,8 +751,9 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
     padding: 0;
 }
 .list-grid2 .list img {
-	width: 550px;
-	height: 300px;
+	width: 100%; /* 親要素に合わせて幅を調整 */
+    max-width:100%; /* 画像の最大幅を400pxに設定（必要に応じて調整） */
+    height: auto; /* 高さを自動調整 */
 	object-fit: cover; /* 画像が指定されたサイズに合うようにトリミング */
   }
 /* ボックス内のp要素 */
