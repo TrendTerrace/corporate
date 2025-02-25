@@ -188,6 +188,8 @@ body:not(.home) #container {
 
 	#contents {
 		padding-top: 80px;	/*コンテンツ内の上の余白だけ上書き*/
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 
 	}/*追加指定ここまで*/
