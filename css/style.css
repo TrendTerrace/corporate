@@ -442,7 +442,7 @@ a.ddmenu::before {
 main h2 {
 	font-family: "Reddit Sans", "Noto Sans JP", sans-serif;
 	font-size: 3rem;		/*文字サイズ。基準の3倍の大きさに。*/
-	margin-top: 80px;
+	margin-top: 60px;
 	letter-spacing: 0.1em;	/*文字間隔を少しだけ広く*/
 	color:#fff;	/*文字色。css冒頭で指定しているprimary-colorを読み込みます*/
 }
@@ -735,7 +735,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
     grid-template-columns: repeat(2, 1fr); /* 5列に指定 */
     gap: 1rem;
     color: var(--text-color);
-	width: 90%; /* 親要素の幅に合わせて調整 */
+	width: 68%; /* 親要素の幅に合わせて調整 */
     margin: 0 auto; /* 中央に配置 */
 }
 
@@ -830,7 +830,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	background: var(--primary-color);	/*背景色。css冒頭で指定しているprimary-colorを読み込みます*/
 	color: var(--primary-inverse-color);	/*文字色。css冒頭で指定しているprimary-inverse-colorを読み込みます*/
 	padding-top: 1vw;		/*ボックス内の上に空ける余白。お好みで調整して下さい。*/
-	padding-bottom: 5vw;	/*ボックス内の下に空ける余白。お好みで調整して下さい。*/
+	padding-bottom: 2vw;	/*ボックス内の下に空ける余白。お好みで調整して下さい。*/
 	margin-top: 5vw;		/*ボックス外の上に空ける余白。お好みで調整して下さい。*/
 	margin-bottom: 10vw;	/*ボックス外の下に空ける余白。お好みで調整して下さい。*/
 	
@@ -857,12 +857,12 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 }
 
 .bg1::before {
-	top: -5vw;	/*上の、heightの「5vw」と数字を揃えて先頭にマイナスをつける*/
+	top: -4vw;	/*上の、heightの「5vw」と数字を揃えて先頭にマイナスをつける*/
 	clip-path: polygon(0 100%, 100% 0, 100% 100%);	/*三角形の形を作っています*/
 }
 
 .bg1::after {
-	bottom: -5vw;	/*上の、heightの「5vw」と数字を揃えて先頭にマイナスをつける*/
+	bottom: -4vw;	/*上の、heightの「5vw」と数字を揃えて先頭にマイナスをつける*/
 	clip-path: polygon(0 0, 100% 0, 0 100%);	/*三角形の形を作っています*/
 }
 
