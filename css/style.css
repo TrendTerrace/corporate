@@ -1049,30 +1049,43 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
   
   #pro2 .image {
 	flex: 1; /* 画像領域が利用可能なスペースを埋める */
-	text-align: right; /* 画像を右寄せ */
+	text-align: center; /* 画像を右寄せ */
 	margin-top: 150px;
 	size: 80%;
   }
-  
+  #pro2{
+	background-color: #ffffff;
+	padding: 2px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 20px;
+  }
   #pro2 .image img {
 	margin-top: 50px;
+	position: relative;
 	max-width: 100%; /* 画像が親要素の幅を超えないようにする */
 	height: auto;
   }
   
 #pro2 #setumeibun {
-	font-size: 20px; /* 説明文のフォントサイズ調整 */
+	font-size: clamp(13px, 3vw, 20px);
 	line-height: 1.6; /* 行間を調整して読みやすくする */
-	color: #000;
+	color: #000000;
+	padding: 3px;
   }
 #setumeibun {
-	font-size: 20px; /* 説明文のフォントサイズ調整 */
-
+	font-size: clamp(15px, 3vw, 20px);
+	color: #000000;
   }
-  #pro2 h2{
-	background: linear-gradient(transparent 70%, rgb(253, 253, 253) 80%);
-
-	color: #ffffff;
+#hutozi{
+	font-size: clamp(14px, 3vw, 30px);
+	color: #000000;
+	background: linear-gradient(transparent 97%, rgb(0, 0, 0) 97%);
+	font-weight:bold ;
+}
+.under{
+	background: linear-gradient(transparent 80%, rgb(238, 124, 18) 80%);
+	color: #020202;
   }
 /*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
