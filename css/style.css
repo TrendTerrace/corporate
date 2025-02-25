@@ -1035,6 +1035,45 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	  display: none; /* 画像を非表示にする */
 	}
   }
+
+
+  #pro2 .container {
+	display: flex;
+	align-items: center; /* 上下中央揃え */
+  }
+  
+  #pro2 .text {
+	flex: 1; /* テキスト領域が利用可能なスペースを埋める */
+	padding-right: 30px; /* 画像との間に余白を追加 */
+  }
+  
+  #pro2 .image {
+	flex: 1; /* 画像領域が利用可能なスペースを埋める */
+	text-align: right; /* 画像を右寄せ */
+	margin-top: 150px;
+	size: 80%;
+  }
+  
+  #pro2 .image img {
+	margin-top: 50px;
+	max-width: 100%; /* 画像が親要素の幅を超えないようにする */
+	height: auto;
+  }
+  
+#pro2 #setumeibun {
+	font-size: 20px; /* 説明文のフォントサイズ調整 */
+	line-height: 1.6; /* 行間を調整して読みやすくする */
+	color: #000;
+  }
+#setumeibun {
+	font-size: 20px; /* 説明文のフォントサイズ調整 */
+
+  }
+  #pro2 h2{
+	background: linear-gradient(transparent 70%, rgb(253, 253, 253) 80%);
+
+	color: #ffffff;
+  }
 /*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
 .pagetop-show {display: block;}
