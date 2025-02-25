@@ -1084,9 +1084,15 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	font-weight:bold ;
 }
 .under{
-	background: linear-gradient(transparent 80%, rgb(238, 124, 18) 80%);
+	/* background: linear-gradient(transparent 97%, #289F28 97%); */
 	color: #020202;
   }
+  .instagram-link {
+	text-decoration: none;
+  }
+  
+
+
 /*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
 .pagetop-show {display: block;}
