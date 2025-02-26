@@ -729,6 +729,9 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 /* ボックス内のfigure画像 */
 .list-grid1 .list figure img {
     margin-bottom: 0.5rem; /* 画像の下に空けるスペース */
+	width: 380px;
+	height: 220px;
+	object-fit: cover; 	
 
 }
 /*ここからーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
@@ -737,7 +740,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
     grid-template-columns: repeat(2, 1fr); /* 5列に指定 */
     gap: 1rem;
     color: var(--text-color);
-	width: 68%; /* 親要素の幅に合わせて調整 */
+	width: 67%; /* 親要素の幅に合わせて調整 */
     margin: 0 auto; /* 中央に配置 */
 }
 
@@ -778,6 +781,10 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 		width: 100%;
         gap: 1rem; /* ブロックの間に空けるマージン的な指定 */
     }
+	.list-grid1 .list figure img {
+		width: 100%; /* 幅を親要素に合わせて調整 */
+		height: auto; /* 高さを自動調整 */
+	  }
 }
 
 /* ボックス１個あたり */
@@ -905,19 +912,21 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 .table-container {
   display: flex;
   justify-content: center; /* 水平方向の中央揃え */
+
 }
 
 .ta1 {
   table-layout: fixed;
-  border-top: 1px solid #333;
+  border-top: 1px solid #000000;
   width: 100%; /* テーブルの幅を調整 */
   margin-bottom: 5rem;
+  
 }
 
 .ta1 caption {
   font-weight: bold;
   padding: 0.5rem 1rem;
-  background: #333;
+  background: #000000;
   color: #fff;
   margin-bottom: 1rem;
   border-radius: 5px;

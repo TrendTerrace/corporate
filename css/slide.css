@@ -13,7 +13,11 @@
 	padding-top: 80%;
 	position: relative;
 }
+/* * {
 
+	outline: 1px #000 solid;
+	
+	} */
 /*３セットのスライドショーを囲むそれぞれのブロック*/
 #mainimg div div {
 	width: 55vw;	/*幅。画面の45%。*/
@@ -44,8 +48,7 @@
 /*３枚目画像*/
 .slide3 {
 	background: url('../images/raion3.jpg') no-repeat center center / cover;	/*３枚目の背景画像の読み込み*/
-	justify-content: center;/*テキストブロックを中央に*/
-	text-align: center;			/*テキストをセンタリング*/
+		/*テキストをセンタリング*/
 }
 .slide3 div { /* 2枚目の画像のスライド内にあるdiv要素 */
 	position: absolute; /* 絶対位置に配置 */
@@ -90,12 +93,8 @@
 	#mainimg p {
 		font-size:16px;
 	}
-	#mainimg h1 {
-		font-size: 30px;
-	}
-	#mainimg div div {
-		width: 100%;
-	}
+
+
 	.slide{
 		width: 100%;
 	}
