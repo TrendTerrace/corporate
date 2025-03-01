@@ -691,7 +691,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 }
 .list-grid1 .list img {
 	width: 100%; /* 親要素に合わせて幅を調整 */
-    max-width: 100%; /* 画像の最大幅を400pxに設定（必要に応じて調整） */
+    max-width: 100%; 
     height: auto; /* 高さを自動調整 */
     object-fit: cover;
   }
@@ -729,8 +729,10 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 /* ボックス内のfigure画像 */
 .list-grid1 .list figure img {
     margin-bottom: 0.5rem; /* 画像の下に空けるスペース */
-	width: 380px;
-	height: 220px;
+	/* width: 380px;
+	height: 220px; */
+	width: calc(380px / 380 * 100vw); /* 画面幅に対する割合で幅を指定 */
+	height: calc(220px / 380 * 100vw); /* 幅に比例して高さを指定 */
 	object-fit: cover; 	
 
 }
