@@ -60,13 +60,13 @@
 /*大きなテキスト*/
 #mainimg h1 {
 	margin: 0;padding: 0;
-	font-size: clamp(24px, 4vw, 65px);	/*文字サイズ。100vwは画面幅100%のことです。*/
+	font-size: clamp(20px, 4vw, 65px);	/*文字サイズ。100vwは画面幅100%のことです。*/
 	line-height: 1.5;	/*行間を少し狭く*/
 	font-weight: 500;	/*文字の太さを少し太く*/
 }
 /*小さなテキスト*/
 #mainimg p {
-	font-size: clamp(10px, 3vw, 32px);	/*文字サイズ。100vwは画面幅100%のことです*/
+	font-size: clamp(8px, 3vw, 32px);	/*文字サイズ。100vwは画面幅100%のことです*/
 	padding-left: 0.5rem;	/*左に空ける余白。0.5文字分。*/
 }
 /*現在表示されているスライドのみをクリック可能にする設定（変更不要）
@@ -74,7 +74,9 @@
 .slide {
 	pointer-events: none; /* デフォルトでクリックを無効にする */
 }
-
+.ori-ori{
+	display: none;
+}
 .slide.active {
 	pointer-events: auto; /* 表示中のスライドのみクリックを有効にする */
 }
@@ -94,7 +96,9 @@
 		font-size:16px;
 	}
 
-
+	.ori-ori{
+		display: block; /* 表示する */
+	}
 	.slide{
 		width: 100%;
 	}
