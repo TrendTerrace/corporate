@@ -727,14 +727,27 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 }
 
 /* ボックス内のfigure画像 */
-.list-grid1 .list figure img {
-    margin-bottom: 0.5rem; /* 画像の下に空けるスペース */
-	/* width: 380px;
-	height: 220px; */
-	width: calc(380px / 380 * 100vw); /* 画面幅に対する割合で幅を指定 */
-	height: calc(220px / 380 * 100vw); /* 幅に比例して高さを指定 */
-	object-fit: cover; 	
+.list-grid1 .list figure {
+    position: relative; /* 相対位置指定 */
+    width: 100%; /* 親要素に合わせて幅を設定 */
+    padding-bottom: calc(220 / 380 * 100%); /* アスペクト比を維持 (220/380) */
+    overflow: hidden; /* 画像がコンテナからはみ出さないように */
+}
 
+.list-grid1 .list figure img {
+    position: absolute; /* 絶対位置指定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .list-grid1 .list figure {
+        padding-bottom: calc(220 / 380 * 100%); /* モバイルでもアスペクト比を維持 */
+    }
 }
 /*ここからーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 .list-grid2 {
@@ -846,8 +859,8 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	margin-bottom: 10vw;	/*ボックス外の下に空ける余白。お好みで調整して下さい。*/
 	
 	/*以下は変更不要*/
-	margin-left: calc(-1 * var(--global-space));
-	margin-right: calc(-1 * var(--global-space));
+	/* margin-left: calc(-1 * var(--global-space));
+	margin-right: calc(-1 * var(--global-space)); */
 	padding-left: var(--global-space);
 	padding-right: var(--global-space);
 }
