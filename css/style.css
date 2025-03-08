@@ -921,24 +921,6 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 /*----------------------------------*/
 
 
-.privacy-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 50px;
-	margin-top: 50px;
-    border-radius: 8px;
-
-  }
-.privacy-container ul {
-    padding-left: 20px;
-}
-
-.privacy-container li {
-    margin-bottom: 5px;
-	size: 6px;
-}
-
 /*テーブル（ta1）
 ---------------------------------------------------------------------------*/
 /*テーブル１行目に入った見出し部分（※caption）*/
