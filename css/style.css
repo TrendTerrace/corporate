@@ -918,6 +918,27 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	opacity: 0.8;	/*マウスオン時に80%だけ色を出す。つまり薄くなります。*/
 }
 
+/*----------------------------------*/
+
+
+.privacy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 50px;
+	margin-top: 50px;
+    border-radius: 8px;
+ 
+}
+
+.privacy-container ul {
+    padding-left: 20px;
+}
+
+.privacy-container li {
+    margin-bottom: 5px;
+	size: 6px;
+}
 
 /*テーブル（ta1）
 ---------------------------------------------------------------------------*/
